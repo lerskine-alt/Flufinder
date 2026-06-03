@@ -32,3 +32,10 @@ ggbarplot <- function(peptide_counts_table) {
     labs(x="Flu Strain", y="Peptide Counts")
   
 }
+
+trypsinize <- function(proteins) {
+  
+  library(stringr)
+  
+  lapply(proteins, str_split_1, pattern="(?<=R|K)")
+}
