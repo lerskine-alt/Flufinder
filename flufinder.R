@@ -19,3 +19,20 @@ aa <- list(A=list(c("L","V","K"),
 splitpeptides_to_masses(aa)
 
 splitpeptides_to_masses(aa)$A
+
+
+
+ggbarplot <- function(peptide_counts_table) {
+  
+  library(ggplot2)
+  # Generating a barplot from the peptide counts dataframe
+  ggplot(peptide_counts_table) +
+    aes(rownames(peptide_counts_table), peptide_counts) +
+    geom_col(fill="blue", width=0.5) +
+    theme_bw() +
+    labs(x="Flu Strain", y="Peptide Counts")
+  
+}
+
+counts_df <- data.frame(peptide_counts=c(3, 0, 0), rownames=c("A", "B",
+                                                              "C"))
