@@ -38,3 +38,14 @@ trypsinize <- function(proteins) {
   
   lapply(proteins, str_split_1, pattern="(?<=R|K)")
 }
+
+count_matching_masses <- function(protein_masses, sample) {
+  
+
+  df <- as.data.frame(sapply(protein_masses, function (x)
+    sum(as.character(sample) %in% as.character(x))))
+  
+  names(df) <- "peptide_counts"
+  
+  return(df)
+}
