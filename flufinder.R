@@ -17,5 +17,4 @@ aa <- list(A=list(c("L","V","K"),
                   c("L","E","F","H","L","S","E","R"), c("Y","D","E","I","M")))
 
 splitpeptides_to_masses(aa)
-
 splitpeptides_to_masses(aa)$A
