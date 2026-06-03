@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 splitpeptides_to_masses <- function(aa) {
   aa_masses <- c(A=71.037, R=156.101, N=114.042, D=115.026, C=103.009,
                  Q=128.058, E=129.042, G=57.0211, H=137.058, I=113.084, L=113.084, K=128.094, M=131.040, F=147.068, P=97.052, S=87.032, T=101.047, W=186.079, Y=163.063, V=99.068)
@@ -17,18 +17,13 @@ aa <- list(A=list(c("L","V","K"),
            C=list(c("M","I","N","E","P","F","S","W","R"),
                   c("L","E","F","H","L","S","E","R"), c("Y","D","E","I","M")))
 
-splitpeptides_to_masses(aa)
-
-splitpeptides_to_masses(aa)$A
-
-
 
 ggbarplot <- function(peptide_counts_table) {
   
   library(ggplot2)
   # Generating a barplot from the peptide counts dataframe
   ggplot(peptide_counts_table) +
-    aes(rownames(peptide_counts_table), peptide_counts) +
+    aes(rownames(peptide_counts_table), peptide_counts) +ß
     geom_col(fill="blue", width=0.5) +
     theme_bw() +
     labs(x="Flu Strain", y="Peptide Counts")
@@ -37,5 +32,3 @@ ggbarplot <- function(peptide_counts_table) {
 
 counts_df <- data.frame(peptide_counts=c(3, 0, 0), rownames=c("A", "B",
                                                               "C"))
-=======
->>>>>>> f86a4c092b34766925cb824b87eced06122da4f9
